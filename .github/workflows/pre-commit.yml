@@ -1,0 +1,10 @@
+name: pre-commit
+on:
+  workflow_dispatch:
+  workflow_call:
+
+jobs:
+  reusable-job:
+    steps:
+      - name: Greet Someone
+        run: echo "Hello guys"
