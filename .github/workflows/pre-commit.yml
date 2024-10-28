@@ -5,6 +5,7 @@ on:
 
 jobs:
   reusable-job:
+    runs-on: docker
     steps:
       - name: Greet Someone
         run: echo "Hello guys"
