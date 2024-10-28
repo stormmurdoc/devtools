@@ -1,11 +1,12 @@
 name: pre-commit
 on:
-  workflow_dispatch:
-  workflow_call:
-
+  workflow_call: # Ermöglicht die Wiederverwendbarkeit in anderen Repositories
 jobs:
-  reusable-job:
-    runs-on: ubuntu-latest
+  test:
+    runs-on: docker
     steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4.1.6
+
       - name: Greet Someone
         run: echo "Hello guys"
